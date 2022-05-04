@@ -10,7 +10,7 @@ module.exports = {
   entry: {
     index: './src/js/index.js',
     about: './src/js/about.js',
-    contacts: './src/js/contacts.js',
+    contact: './src/js/contact.js',
   },
 
   // https://webpack.js.org/configuration/dev-server/
@@ -46,8 +46,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/pages/contact.html',
       inject: true,
-      chunks: ['contacts'],
-      filename: 'contacts.html',
+      chunks: ['contact'],
+      filename: 'contact.html',
     }),
   ],
 };
