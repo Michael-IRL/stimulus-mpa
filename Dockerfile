@@ -6,4 +6,4 @@ COPY ./nginx.conf /etc/nginx/nginx.conf
 
 COPY ./dist .
 
-EXPOSE 8080
+EXPOSE 80
