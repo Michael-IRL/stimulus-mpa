@@ -8,7 +8,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
-  devtool: 'source-map',
+  //devtool: 'source-map',
 
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
