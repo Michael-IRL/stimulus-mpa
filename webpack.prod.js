@@ -8,13 +8,13 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
-  //devtool: 'source-map',
+  devtool: 'source-map',
 
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
     index: './src/js/index.js',
     about: './src/js/about.js',
-    contacts: './src/js/contacts.js',
+    contact: './src/js/contact.js',
   },
 
   // how to write the compiled files to disk
@@ -41,7 +41,6 @@ module.exports = {
     new CompressionPlugin({
       test: /\.js(\?.*)?$/i,
       exclude: /.map$/,
-      deleteOriginalAssets: 'keep-source-map',
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/index.html',
@@ -58,8 +57,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/pages/contact.html',
       inject: 'body',
-      chunks: ['contacts'],
-      filename: 'contacts.html',
+      chunks: ['contact'],
+      filename: 'contact.html',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
