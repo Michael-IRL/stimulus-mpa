@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   stimulus-mpa:
-    image: mpa-serve
+    image: michaelirl/mpa-serve:1.0.0
     build:
       context: .
       dockerfile: ./Dockerfile
